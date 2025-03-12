@@ -46,10 +46,24 @@ height: 70px;
     align-items: center;
 }
 #buttonWrapper{
-  justify-self: end;
+  justify-self:   end;
 }
 #menuToggler{
     display: none;
+}
+    #menuToggler:checked + #toggleButtonContenainer span{
+    background-color: var(--blue);
+        
+}
+    #menuToggler:checked + #toggleButtonContenainer span::before{
+    margin-top: 0;
+        rotate: 45deg;
+        
+}
+    #menuToggler:checked + #toggleButtonContenainer span::after{
+    margin-top: 0;
+        rotate: -45deg;
+        
 }
 #toggleButtonContenainer{
     width: 30px;
@@ -64,6 +78,7 @@ display: block;
     background-color: var(--white);
     border-radius: 2px;
     position: absolute;
+    transition: rotate .2S background-color .2s ;
 }
 #toggleButtonContenainer span::before{
 content: '';
@@ -74,8 +89,40 @@ content: '';
 margin-top: 8px;
 }
 #mainMenu{
-    display: none;
+position: absolute;
+    left: -100vw;
+    top: 50px;
+    background-color: var(--light-blue);
+    width: 100%;
+    height: calc(100vh - 50px);
+    transition: left .2s;
+    
 }
+#mainHeader:has(#menuToggler:checked) #mainMenu{
+    left: 0;
+}
+#mainMenu ul{ 
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 50px 10px;
+}
+#mainMenu ul a{
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 2em;
+    transition: color .2s;
+    
+}
+#mainMenu ul a:hover{
+    color: var(--orange);
+    text-decoration: underline;
+    
+}
+
 #mainFooter{
     background-color: var(--blue);
     color: var(--white);
