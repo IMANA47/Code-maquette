@@ -123,7 +123,47 @@ position: absolute;
     text-decoration: underline;
     
 }
+#mainContent header{
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+}
+#mainContent header div{
+    background-color: rgba(0,0,0,.3);
+}
+#mainContent h1 {
+    font-size: 2.5em;
+    color: var(--blue);
+    text-align: center;
+    padding: 50px 30px;
+    -webkit-text-stroke: 1px var(--white);
+}
+#mainContent #innerContent{
+    padding: 10px 30px;
+}
+#mainContent a{
+    text-decoration: none;
+    color: var(--orange);
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 0%  2px;
+    background-position: 0% 100%;
+    transition: background-size .2s; 
+}
 
+#mainContent a:hover{
+     background-size: 100% 2px;
+}
+#mainContent p .lead{
+    font-size: 1.2em;
+    font-weight: 100;
+
+}
+#mainContent p .lead:nth-last-child(1 of .lead) {
+    border-bottom: 1px solid var(--dark-grey);
+    padding-bottom: 30px;
+    
+}
 #mainFooter{
     background-color: var(--blue);
     color: var(--white);
