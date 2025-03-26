@@ -154,15 +154,75 @@ position: absolute;
 #mainContent a:hover{
      background-size: 100% 2px;
 }
-#mainContent p .lead{
+#mainContent p.lead{
     font-size: 1.2em;
     font-weight: 100;
 
 }
-#mainContent p .lead:nth-last-child(1 of .lead) {
+#mainContent p.lead:nth-last-child(1 of .lead) {
     border-bottom: 1px solid var(--dark-grey);
     padding-bottom: 30px;
     
+}
+#mainContent figure{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+#mainContent figure img{
+    max-width: 100%;
+}
+#mainContent figure figcaption{
+    background-color: var(--light-blue);
+    font-size: 0.6rem;
+    padding: 10px 30px;
+}
+#contactForm .error{
+    color: var(--red);
+    font-size: .6em;
+    margin: 0;
+    text-transform: uppercase;
+}
+#contactForm input[role=switch] {
+     appearance: none;
+    width: 2em;
+    height: 1em;
+    border: 1px solid var(--dark-grey);
+    border-radius: 1em;
+    background-color:  var(--light-grey);
+    box-sizing: content-box;
+    vertical-align: middle;
+    position: relative;
+}
+#contactForm input[role=switch]:checked {
+    background-color: var(--light-orange);
+}
+#contactForm input[role=switch]::before {
+     content: '';
+    width: .7em;
+    height: .7em;
+    border-radius: 50%;
+    background-color: var(--blue);
+    border: 1px solid var(--dark-grey);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0 0.15em;
+        box-sizing: content-box;
+    transition: left .2s;
+    
+}
+#contactForm input[role=switch]:checked:before {
+    left: .9em;
+} 
+#contactForm textarea{
+    height: 10em;
+    resize: none;
+}
+#contactForm label{
+    color: var(--blue);
+    margin-bottom: 10px;
 }
 #mainFooter{
     background-color: var(--blue);
@@ -250,6 +310,19 @@ text-align: center;
         color: var(--white);
         font-size: 1.2em; 
     }
+    #mainContent figure{
+    max-width: 50%;
+        margin: 0 auto;
+}
+       #mainContent figure.algin-left{
+    float: left;
+    margin: 0 0 30px 30px;
+}
+    
+    #mainContent figure.algin-right{
+    float: right;
+    margin: 0 0 30px 30px;
+}
     #mainFooter .wrapper{
         grid-template-columns: 250px 1fr 250px;
     }
