@@ -182,6 +182,7 @@ position: absolute;
     font-size: .6em;
     margin: 0;
     text-transform: uppercase;
+    display: none;
 }
 #contactForm input[role=switch] {
      appearance: none;
@@ -220,8 +221,8 @@ position: absolute;
 #contactForm .form-field{
     display: flex;
     flex-direction: column;
+    margin-bottom: .6em;
 }
-
 #contactForm  input[type=text],
 #contactForm  input[type=email],
 #contactForm textarea{
@@ -229,6 +230,26 @@ position: absolute;
     border-radius: 5px;
     border:  solid 1px var(--dark-grey);
     color: var(--dark-grey);
+}
+
+/*Pour les champ valide*/
+#contactForm  input[type=text]:user-valid,
+#contactForm  input[type=email]:user-valid,
+#contactForm textarea:user-valid{
+ border-color: var(--green);
+}
+
+/*Pour les champ invalide*/
+#contactForm  input[type=text]:user-invalid,
+#contactForm  input[type=email]:user-invalid,
+#contactForm textarea:user-invalid{
+ border-color: var(--red);
+}
+#contactForm .form-field:has(.invalid) p.error {
+    display: block;
+}
+#contactForm .form-field:has(.invalid) {
+    margin-bottom: 0;
 }
 
 .form-field:has(input:required) label::after,
@@ -245,7 +266,7 @@ position: absolute;
 #contactForm  input[type=email]::placeholder,
 #contactForm textarea::placeholder{
     color: var(--light-blue);
-}
+} 
 #contactForm textarea{
     height: 10em;
     resize: none;
