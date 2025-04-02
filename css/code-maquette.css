@@ -249,7 +249,7 @@ position: absolute;
     display: block;
 }
 #contactForm .form-field:has(.invalid) {
-    margin-bottom: 0;
+    margin-bottom: 0; 
 }
 
 .form-field:has(input:required) label::after,
@@ -363,6 +363,10 @@ text-align: center;
     }
     #mainHeader .wrapper{
         grid-template-columns: 200px 1fr;
+    }
+    #contactForm {
+        max-width: 50%;
+        margin: 0 auto;
     }
     #buttonWrapper{
         display: none;
