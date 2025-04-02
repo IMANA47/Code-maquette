@@ -216,10 +216,48 @@ position: absolute;
 #contactForm input[role=switch]:checked:before {
     left: .9em;
 } 
+
+#contactForm .form-field{
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm  input[type=text],
+#contactForm  input[type=email],
+#contactForm textarea{
+    padding: 8px;
+    border-radius: 5px;
+    border:  solid 1px var(--dark-grey);
+    color: var(--dark-grey);
+}
+
+.form-field:has(input:required) label::after,
+.form-field:has(textarea:required) label::after,
+.form-checkbox-wrapper:has(input:required) label::after{
+ content:'*';
+ color: var(--red);
+    font-size: .8em;
+    margin-left: 5px;
+    
+}
+
+#contactForm  input[type=text]::placeholder,
+#contactForm  input[type=email]::placeholder,
+#contactForm textarea::placeholder{
+    color: var(--light-blue);
+}
+
+
+
 #contactForm textarea{
     height: 10em;
     resize: none;
 }
+
+#contactForm .form-checkbox-wrapper{
+    margin-bottom: 10px;
+}
+
 #contactForm label{
     color: var(--blue);
     margin-bottom: 10px;
