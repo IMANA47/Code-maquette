@@ -297,6 +297,11 @@ position: absolute;
     color: var(--blue);
     margin-bottom: 10px;
 }
+.cards{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr))
+}
 .cards article{
     border: 1px solid var(--blue);
     border-radius: 10px;
