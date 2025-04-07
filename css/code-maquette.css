@@ -118,7 +118,7 @@ position: absolute;
     transition: color .2s;
     
 }
-#mainMenu ul a:hover{
+#mainMenu ul a:hover , #mainMenu ul a.active {
     color: var(--orange);
     text-decoration: underline;
     
